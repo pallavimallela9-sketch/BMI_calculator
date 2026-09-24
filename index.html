@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitCheck — BMI Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>  
+<body>
+
+  <div class="card">
+    <h1>FitCheck</h1>
+    <p class="subtitle">Know your BMI, know your body.</p>
+
+    <form id="bmiForm">
+  <label>Weight (kg)</label>
+  <input type="number" id="weight" placeholder="e.g. 65" required>
+
+  <label>Height (cm)</label>
+  <input type="number" id="height" placeholder="e.g. 170" required>
+
+  <button type="submit">Calculate BMI</button>
+</form>
+    <div id="result" class="result" hidden>
+      <div class="bmi-number">
+        <span id="bmiValue">0</span>
+        <span class="bmi-label">your BMI</span>
+      </div>
+
+      <div id="bmiCategory" class="category"></div>
+
+      <div class="bar">
+        <div class="bar-segment under">Under</div>
+        <div class="bar-segment normal">Normal</div>
+        <div class="bar-segment over">Over</div>
+        <div class="bar-segment obese">Obese</div>
+        <div id="marker" class="marker"></div>
+      </div>
+
+      <p id="tip" class="tip"></p>
+    </div>
+  </div>
+
+<script src="sheet.js"></script>
+</body>
+</html>

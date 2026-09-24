@@ -1,0 +1,149 @@
+root {
+  --ink: #202b26;
+  --bg: #eef1ec;
+  --card: #ffffff;
+  --line: #dbe0d8;
+  --teal: #2f6b5e;
+  --teal-dark: #234f45;
+  --amber: #b9832f;
+  --red: #b5533c;
+  --muted: #6b756f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--ink);
+  padding: 24px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 32px;
+  width: 100%;
+  max-width: 380px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 4px 0 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.field { margin-bottom: 16px; }
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.field input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 15px;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.field input:focus {
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: var(--teal);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+button:hover { background: var(--teal-dark); }
+
+.result {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.bmi-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bmiValue {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  line-height: 1;
+}
+
+.bmi-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.category {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.bar {
+  position: relative;
+  display: flex;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.bar-segment { flex: 1; }
+.bar-segment.under { background: #cdd8e8; }
+.bar-segment.normal { background: var(--teal); }
+.bar-segment.over { background: var(--amber); }
+.bar-segment.obese { background: var(--red); }
+
+.marker {
+  position: absolute;
+  top: -4px;
+  width: 3px;
+  height: 18px;
+  background: var(--ink);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: left 0.3s ease;
+}
+
+.tip {
+  margin: 18px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
